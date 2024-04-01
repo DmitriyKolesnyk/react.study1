@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Profile from "./components/Profile/Profile.jsx";
+import  css from "./components/Profile/Profile.module.css";
+
 
 function App() {
 
   return (
-    <> Hello
-    </>
+    <main>
+      <Profile/>
+    </main>
   )
 }
+
+
 
 export default App
 // !--git status -Check changed files-->
