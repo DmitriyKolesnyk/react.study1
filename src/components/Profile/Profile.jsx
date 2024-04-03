@@ -1,33 +1,34 @@
 import React from 'react';
 import css from "./Profile.module.css";
+// import user from "src/api/user.json"
 
-const Profile = () => {
+const Profile = ({username, tag, location, stats, avatar}) => {
     return (
             <div className={css.container}>
 
                 <div className={css.description}>
                     <img
-                        src='https://cdn-icons-png.flaticon.com/512/2922/2922506.png'
+                        src={avatar}
                         alt="User avatar"
                         className={css.avatar}
                     />
-                    <p className={css.name}>Jacques Gluke</p>
-                    <p className={css.tag}>jgluke</p>
-                    <p className={css.location}>Ocho Rios, Jamaica</p>
+                    <p className={css.name}>{username}</p>
+                    <p className={css.tag}>{tag}</p>
+                    <p className={css.location}>{location}</p>
                 </div>
 
                 <ul className={css.stats}>
                     <li>
                         <span className={css.label}>Followers</span><br/>
-                        <span className={css.quantity}>5603</span>
+                        <span className={css.quantity}>{stats.followers}</span>
                     </li>
                     <li>
                         <span className={css.label}>Views</span><br/>
-                        <span className={css.quantity}>4827</span>
+                        <span className={css.quantity}>{stats.views}</span>
                     </li>
                     <li>
                         <span className={css.label}>Likes</span><br/>
-                        <span className={css.quantity}>1308</span>
+                        <span className={css.quantity}>{stats.likes}</span>
                     </li>
                 </ul>
             </div>
