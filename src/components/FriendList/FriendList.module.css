@@ -1,0 +1,43 @@
+.item{
+display: flex;
+    background-color: white;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px;
+    border-color: #888888;
+    border-style: solid;
+    border-top-style: hidden;
+    border-bottom-style: dotted;
+}
+
+.statusGreen{
+background-color: aquamarine;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.statusRed{
+background-color: coral;
+    height: 30px;
+    border-radius: 50%;
+}
+.friendList{
+    list-style-type: none;
+    background-color: white;
+    width: 600px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avatar {
+width: 100px;
+}
+
+.name {
+font-size: 30px;
+    color: #1a1a1a;
+}

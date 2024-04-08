@@ -4,6 +4,8 @@ import  css from "./components/Profile/Profile.module.css";
 import user from "./api/user.json"
 import Statistics from "./components/Statistics/Statistics.jsx";
 import data from "./api/data.json"
+import friends from "./api/friends.json"
+import FriendList from "./components/FriendList/FriendList.jsx"
 
 
 function App() {
@@ -15,9 +17,12 @@ function App() {
       {/*    location={user.location}*/}
       {/*    avatar={user.avatar}*/}
       {/*    stats={user.stats}/>*/}
-    <Statistics
-    title="UPLOAD STATS"
-    stats={data}
+    {/*<Statistics*/}
+    {/*title="UPLOAD STATS"*/}
+    {/*stats={data}*/}
+    {/*  />*/}
+      <FriendList
+          friends = {friends}
       />
     </main>
   )
