@@ -35,14 +35,13 @@
 }
 
 .stats {
-    background-color: darkcyan;
+    background-color: lightgrey;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 0;
 }
 
 .label {

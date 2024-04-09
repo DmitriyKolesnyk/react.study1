@@ -7,4 +7,9 @@
 .head{
     background-color: #747bff;
     color: white;
+    height: 40px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: gainsboro;
 }

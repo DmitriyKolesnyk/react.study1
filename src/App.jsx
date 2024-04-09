@@ -1,40 +1,31 @@
-import './App.css'
+import "./App.css";
 import Profile from "./components/Profile/Profile.jsx";
-import  css from "./components/Profile/Profile.module.css";
-import user from "./api/user.json"
+import user from "./api/user.json";
 import Statistics from "./components/Statistics/Statistics.jsx";
-import data from "./api/data.json"
-import friends from "./api/friends.json"
-import FriendList from "./components/FriendList/FriendList.jsx"
-import transactions from "./api/transactions.json"
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx"
-
+import data from "./api/data.json";
+import friends from "./api/friends.json";
+import FriendList from "./components/FriendList/FriendList.jsx";
+import transactions from "./api/transactions.json";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
 
 function App() {
   return (
     <main>
-      {/*<Profile*/}
-      {/*    username={user.username}*/}
-      {/*    tag={user.tag}*/}
-      {/*    location={user.location}*/}
-      {/*    avatar={user.avatar}*/}
-      {/*    stats={user.stats}/>*/}
-    {/*<Statistics*/}
-    {/*title="UPLOAD STATS"*/}
-    {/*stats={data}*/}
-    {/*  />*/}
-    {/*  <FriendList*/}
-    {/*      friends = {friends}*/}
-    {/*  />*/}
-        <TransactionHistory
-            items = {transactions}/>
-        </main>
-  )
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="UPLOAD STATS" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </main>
+  );
 }
 
-
-
-export default App
+export default App;
 // !--git status -Check changed files-->
 // <!--git add . -Add all files in commit-->
 // <!--git commit -m "commit description" -To do commit-->
