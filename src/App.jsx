@@ -7,20 +7,23 @@ import friends from "./api/friends.json";
 import FriendList from "./components/FriendList/FriendList.jsx";
 import transactions from "./api/transactions.json";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
-
+import Feedback from "./components/Feedback/Feedback.jsx";
 function App() {
   return (
     <main>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Statistics title="UPLOAD STATS" stats={data} />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      {/*<Profile*/}
+      {/*  username={user.username}*/}
+      {/*  tag={user.tag}*/}
+      {/*  location={user.location}*/}
+      {/*  avatar={user.avatar}*/}
+      {/*  stats={user.stats}/>*/}
+
+      {/*<Statistics title="UPLOAD STATS" stats={data} />*/}
+
+      {/*<FriendList friends={friends} />*/}
+
+      {/*<TransactionHistory items={transactions} />*/}
+      <Feedback/>
     </main>
   );
 }
