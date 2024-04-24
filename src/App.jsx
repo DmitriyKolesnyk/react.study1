@@ -8,6 +8,7 @@ import FriendList from "./components/FriendList/FriendList.jsx";
 import transactions from "./api/transactions.json";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
 import Feedback from "./components/Feedback/Feedback.jsx";
+import ContactList from "./components/Contacts/ContactList.jsx";
 function App() {
   return (
     <main>
@@ -23,7 +24,8 @@ function App() {
       {/*<FriendList friends={friends} />*/}
 
       {/*<TransactionHistory items={transactions} />*/}
-      <Feedback/>
+      {/*<Feedback/>*/}
+      <ContactList/>
     </main>
   );
 }

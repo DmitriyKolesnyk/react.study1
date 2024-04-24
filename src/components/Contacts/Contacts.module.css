@@ -1,0 +1,7 @@
+.ContactListItem {
+    display: flex;
+    align-items: center;
+}
+.ContactListName {
+    margin-right: 10px;
+}

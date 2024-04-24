@@ -30,13 +30,14 @@ class Feedback extends React.Component {
     const positivePercentage = (good / total) * 100 || 0;
     return (
       <div className={css.feedback}>
-        <Section title={"Please leave feedback"} />
+        <Section title={"Please leave feedback"}>
         <FeedbackOptions
           options={Object.keys(this.state)}
           onLeaveFeedback={this.handleFeedbackIncrement}
         />
+          </Section>
 
-        <Section title={"Statistics"} />
+        <Section title={"Statistics"} >
         {total >= 1 ? (
           <Statistics
             good={good}
@@ -48,6 +49,7 @@ class Feedback extends React.Component {
         ) : (
           <Notification />
         )}
+        </Section>
       </div>
     );
   }
