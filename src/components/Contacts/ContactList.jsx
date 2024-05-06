@@ -1,8 +1,10 @@
 import Contacts from "./Contacts.jsx";
 import React, { Component } from "react";
+import css from ".././Contacts/Contacts.module.css";
 import Form from "./Form.jsx";
 import Filter from "./Filter.jsx";
 import shortId from "shortid";
+import contacts from "./Contacts.jsx";
 
 class ContactList extends Component {
   state = {
@@ -25,16 +27,22 @@ class ContactList extends Component {
 
   addContact = (data) => {
     console.log(data);
+    console.log(this.state.contacts);
 
     const contact = {
       id: shortId.generate(),
       name: data.name,
       number: data.number,
     };
+    const neededContact = this.state.contacts.find(
+      (contact) => contact.name === data.name && contact.number === data.number,
+    );
 
-    this.setState((prevState) => ({
-      contacts: [contact, ...prevState.contacts],
-    }));
+    if (neededContact) window.alert(`${data.name} is already in contacts`);
+    else
+      this.setState((prevState) => ({
+        contacts: [contact, ...prevState.contacts],
+      }));
   };
 
   changeFilter = (event) => {
@@ -52,18 +60,18 @@ class ContactList extends Component {
 
   render() {
     const { contacts, filter } = this.state;
-
     const visibleContacts = this.getVisibleContacts();
     return (
-      <>
+      <div className={css.main}>
+        <h1 className={css.h1Title}>Pnonebook</h1>
         <Form onSubmit={this.addContact} />
-        <h1>Contacts</h1>
+        <h1 className={css.h1Title}>Contacts</h1>
         <Contacts
           contacts={visibleContacts}
           onDeleteContact={this.deleteContact}
         />
         <Filter value={filter} onChange={this.changeFilter} />
-      </>
+      </div>
     );
   }
 }
