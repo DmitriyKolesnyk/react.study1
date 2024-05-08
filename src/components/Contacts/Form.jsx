@@ -51,7 +51,9 @@ class Form extends Component {
           />
         </label>
 
-        <button className={css.formButton} type="submit">
+        <button
+            className={css.formButton}
+            type="submit">
           Add contact
         </button>
       </form>
