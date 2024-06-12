@@ -23,6 +23,7 @@ class Form extends Component {
     this.setState({ name: "", number: "" });
   };
 
+
   render() {
     return (
       <form className={css.form} onSubmit={this.handleSubmit}>
@@ -51,9 +52,7 @@ class Form extends Component {
           />
         </label>
 
-        <button
-            className={css.formButton}
-            type="submit">
+        <button className={css.formButton} type="submit">
           Add contact
         </button>
       </form>
